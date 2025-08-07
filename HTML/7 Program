@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Greeting Form</title>
+</head>
+<body>
+
+<h2>Enter Your Name</h2>
+
+<form method="post">
+    <label>Name: </label>
+    <input type="text" name="username">
+    <input type="submit" value="Submit">
+</form>
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = trim($_POST['username']); // remove extra spaces
+
+    if (empty($name)) {
+        echo "<p style='color:red;'>Error: Name field cannot be empty.</p>";
+    } else {
+        echo "<h3>Hello, $name! Welcome to Everyone!</h3>";
+        echo "<p>Have a nice day!!</p>";
+    }
+}
+?>
+
+</body>
+</html>
+
+output:
+Enter Your Name
+Name: 
+ 
+Error: Name field cannot be empty.
+"; } else { echo "
+Hello, $name! Welcome to Everyone!
+"; echo "
+Have a nice day!!
+
+"; } } ?>
