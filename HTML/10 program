@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Grade Checker</title>
+</head>
+<body>
+
+<h2>Enter Marks for 3 Students</h2>
+<form method="post">
+    Student 1 Marks: <input type='number' name='marks[]' min='0' max='100' required><br><br>
+    Student 2 Marks: <input type='number' name='marks[]' min='0' max='100' required><br><br>
+    Student 3 Marks: <input type='number' name='marks[]' min='0' max='100' required><br><br>
+    <input type="submit" value="Check Grades">
+</form>
+
+<?php
+// Fix: Check if REQUEST_METHOD is set to avoid warning
+if (isset($_SERVER["REQUEST_METHOD"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
+    $marksArray = $_POST['marks'];
+
+    echo "<h3>Results:</h3>";
+    foreach ($marksArray as $i => $marks) {
+        // Determine grade
+        if ($marks >= 90)       $grade = 'A';
+        elseif ($marks >= 80)   $grade = 'B';
+        elseif ($marks >= 70)   $grade = 'C';
+        elseif ($marks >= 60)   $grade = 'D';
+        else                    $grade = 'F';
+
+        echo "Student " . ($i + 1) . ": $marks → Grade <strong>$grade</strong><br>";
+    }
+}
+?>
+
+</body>
+</html>
+
+
+output:
+
+Enter Marks for 3 Students
+Student 1 Marks: 
+
+
+Student 2 Marks: 
+
+
+Student 3 Marks: 
+
+
+Results:"; foreach ($marksArray as $i => $marks) { // Determine grade if ($marks >= 90) $grade = 'A'; elseif ($marks >= 80) $grade = 'B'; elseif ($marks >= 70) $grade = 'C'; elseif ($marks >= 60) $grade = 'D'; else $grade = 'F'; echo "Student " . ($i + 1) . ": $marks → Grade $grade
+"; } } ?
