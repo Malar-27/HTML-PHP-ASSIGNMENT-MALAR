@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Purchase Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        form {
+            max-width: 400px;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 5px;
+        }
+        input[type="submit"] {
+            margin-top: 15px;
+            padding: 8px 16px;
+        }
+        .result {
+            background-color: #f0f0f0;
+            padding: 15px;
+            border: 1px solid #ccc;
+            width: fit-content;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Purchase Calculator</h2>
+
+<form method="post">
+    <h3>Item 1</h3>
+    <label>Price:</label>
+    <input type="number" name="price1" step="0.01" required>
+    <label>Quantity:</label>
+    <input type="number" name="qty1" required>
+
+    <h3>Item 2</h3>
+    <label>Price:</label>
+    <input type="number" name="price2" step="0.01" required>
+    <label>Quantity:</label>
+    <input type="number" name="qty2" required>
+
+    <h3>Item 3</h3>
+    <label>Price:</label>
+    <input type="number" name="price3" step="0.01" required>
+    <label>Quantity:</label>
+    <input type="number" name="qty3" required>
+
+    <input type="submit" value="Calculate Total">
+</form>
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Get and sanitize user inputs
+    $price1 = floatval($_POST['price1']);
+    $qty1   = intval($_POST['qty1']);
+
+    $price2 = floatval($_POST['price2']);
+    $qty2   = intval($_POST['qty2']);
+
+    $price3 = floatval($_POST['price3']);
+    $qty3   = intval($_POST['qty3']);
+
+    // Calculate subtotal
+    $subtotal = ($price1 * $qty1) + ($price2 * $qty2) + ($price3 * $qty3);
+
+    // Tax is 10%
+    $tax = $subtotal * 0.10;
+
+    // Total = subtotal + tax
+    $total = $subtotal + $tax;
+
+    // Output result
+    echo "<div class='result'>";
+    echo "<p><strong>Subtotal:</strong> $" . number_format($subtotal, 2) . "</p>";
+    echo "<p><strong>Tax (10%):</strong> $" . number_format($tax, 2) . "</p>";
+    echo "<p><strong>Total Cost:</strong> $" . number_format($total, 2) . "</p>";
+    echo "</div>";
+}
+?>
+
+</body>
+</html>
+
+output:
+Purchase Calculator
+Item 1
+Price:
+Quantity:
+Item 2
+Price:
+Quantity:
+Item 3
+Price:
+Quantity:
+ 
+"; echo "
+Subtotal: $" . number_format($subtotal, 2) . "
+
+"; echo "
+Tax (10%): $" . number_format($tax, 2) . "
+
+"; echo "
+Total Cost: $" . number_format($total, 2) . "
+
+"; echo ""; } ?>
+ 
