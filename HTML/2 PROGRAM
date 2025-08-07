@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Division Table</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        caption {
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+
+<table>
+  <caption>Row ÷ Column</caption>
+  <tr>
+    <th></th>
+    <th>1</th>
+    <th>2</th>
+    <th>3</th>
+  </tr>
+  <tr>
+    <th>1</th>
+    <td>1</td>
+    <td>0.5</td>
+    <td>0.33</td>
+  </tr>
+  <tr>
+    <th>2</th>
+    <td>2</td>
+    <td>1</td>
+    <td>0.66</td>
+  </tr>
+  <tr>
+    <th>3</th>
+    <td>3</td>
+    <td>1.5</td>
+    <td>1</td>
+  </tr>
+</table>
+
+
+</body>
+</html>
