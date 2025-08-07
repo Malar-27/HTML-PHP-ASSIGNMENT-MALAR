@@ -1,0 +1,29 @@
+<?php
+function deal($costA, $sizeA, $costB, $sizeB) {
+    // Calculate cost per unit size for each drink
+    $unitPriceA = $costA / $sizeA;
+    $unitPriceB = $costB / $sizeB;
+
+    // Display unit prices
+    echo "Drink A: Rs.$costA for size $sizeA → Rs. " . round($unitPriceA, 2) . " per unit<br>";
+    echo "Drink B: Rs.$costB for size $sizeB → Rs. " . round($unitPriceB, 2) . " per unit<br><br>";
+
+    // Compare and print the better deal
+    if ($unitPriceA < $unitPriceB) {
+        echo "✅ Drink A is the better deal.";
+    } elseif ($unitPriceB < $unitPriceA) {
+        echo "✅ Drink B is the better deal.";
+    } else {
+        echo "Both drinks offer the same value.";
+    }
+}
+
+// Call the function with the given values
+deal(25, 11, 23, 9);
+?>
+
+OUTPUT:
+
+Drink A: Rs.25 for size 11 → Rs. 2.27 per unit<br>Drink B: Rs.23 for size 9 → Rs. 2.56 per unit<br><br>✅ Drink A is the better deal.
+
+=== Code Execution Successful ===
