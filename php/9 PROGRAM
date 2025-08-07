@@ -1,0 +1,13 @@
+<?php
+// $this = "this"; // ❌ Reserved keyword - will cause error
+$that = "that";
+$the_other = 2.2000000000;
+
+print("$that, $not_set, $that+$the_other");
+?>
+
+ OUTPUT:
+ that, , that+2.2
+
+
+=== Code Execution Successful ===
