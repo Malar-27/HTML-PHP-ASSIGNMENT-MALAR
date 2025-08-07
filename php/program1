@@ -1,1 +1,14 @@
+<?php
+$capital = 67;
+$CaPiTaL = "undefined or default value"; 
+print("Variable capital is $capital\n");
+print("Variable CaPiTaL is $CaPiTaL\n");
+?>
 
+output:
+Variable capital is 67
+Variable CaPiTaL is undefined or default value
+
+
+
+=== Code Execution Successful ===
