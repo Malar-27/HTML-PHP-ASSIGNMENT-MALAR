@@ -1,0 +1,24 @@
+<?php
+// Input: Student's percentage marks
+$marks = 68; // You can change this value to test different cases
+
+// Determine the grade
+if ($marks >= 75) {
+    echo "Grade: First Class";
+} elseif ($marks >= 60 && $marks <= 74) {
+    echo "Grade: Second Class";
+} elseif ($marks >= 40 && $marks <= 59) {
+    echo "Grade: Third Class";
+} elseif ($marks < 40) {
+    echo "Grade: Fail";
+} else {
+    echo "Invalid marks entered.";
+}
+?>
+
+OUTPUT:
+
+Grade: Second Class
+
+
+=== Code Execution Successful ===
