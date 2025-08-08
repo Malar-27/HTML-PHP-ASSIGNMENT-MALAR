@@ -1,0 +1,47 @@
+✅ 1. GET Method
+Data passed via URL (?key=value)
+
+Example:
+
+php
+Copy
+Edit
+<a href="page2.php?name=John">Go</a>
+// page2.php: $_GET['name']
+
+✅ 2. POST Method
+Data sent via HTML form (not visible in URL)
+
+Example:
+
+html
+Copy
+Edit
+<form method="POST" action="page2.php">
+  <input name="name">
+  <input type="submit">
+</form>
+// page2.php: $_POST['name']
+
+✅3. SESSION
+Stores data on the server
+
+Example:
+
+php
+Copy
+Edit
+session_start();
+$_SESSION['user'] = 'Alice'; // Set
+echo $_SESSION['user'];      // Get
+
+✅ 4. COOKIE
+Stores data in the browser
+
+Example:
+
+php
+Copy
+Edit
+setcookie("user", "Tom", time()+3600);  // Set
+echo $_COOKIE['user'];                 // G
