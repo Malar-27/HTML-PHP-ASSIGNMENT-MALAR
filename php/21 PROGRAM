@@ -14,15 +14,9 @@ if (isLeapYear($year)) {
     echo "$year is NOT a Leap Year.";
 }
 ?>
+
 Output:
+
 2024 is a Leap Year. 
 
-22)
-<?php
-$text = "PHP is easy to learn. PHP is powerful. I love PHP!";
-$word = "PHP";
-$count = substr_count($text, $word);
-echo "The word '$word' occurs $count times in the given string.";
-?>
-Output:
-The word 'PHP' occurs 3 times in the given string.
+
