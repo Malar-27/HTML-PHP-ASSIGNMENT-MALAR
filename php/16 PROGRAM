@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sum of Two Numbers</title>
+</head>
+<body>
+
+<h2>Add Two Numbers</h2>
+
+<form method="post">
+    <label>Number 1:</label>
+    <input type="number" name="num1" required><br><br>
+
+    <label>Number 2:</label>
+    <input type="number" name="num2" required><br><br>
+
+    <input type="submit" name="submit" value="Add Numbers">
+</form>
+
+<?php
+// PHP function to add two numbers
+function addNumbers($a, $b) {
+    return $a + $b;
+}
+
+// Check if form is submitted
+if (isset($_POST['submit'])) {
+    // Retrieve and sanitize input
+    $num1 = (float) $_POST['num1'];
+    $num2 = (float) $_POST['num2'];
+
+    // Call the function
+    $sum = addNumbers($num1, $num2);
+
+    // Display result
+    echo "<h3>Result: $num1 + $num2 = $sum</h3>";
+}
+?>
+
+</body>
+</html>
+
+OUTPUT:
+Add Two Numbers
+Number 1: 
+
+
+Number 2: 
+
+
+Result: $num1 + $num2 = $sum"; } ?>
