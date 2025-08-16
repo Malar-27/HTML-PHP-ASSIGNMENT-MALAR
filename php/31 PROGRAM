@@ -1,3 +1,4 @@
+31)
 <?php
 $fruits = ["apple", "banana", "cherry"];
 array_shift($fruits); // Removes "apple"
